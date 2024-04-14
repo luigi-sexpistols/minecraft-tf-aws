@@ -13,7 +13,6 @@ terraform {
 }
 
 provider "aws" {
-  profile = "minecraft-tf-aws"
   region = var.aws.region
 
   default_tags {
