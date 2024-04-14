@@ -7,5 +7,5 @@ variable "aws" {
 
 variable "project_name" {
   type = string
-  default = "Minecraft Server"
+  default = "minecraft-server"
 }
