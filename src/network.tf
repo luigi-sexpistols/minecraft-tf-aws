@@ -28,7 +28,11 @@ resource "aws_internet_gateway" "igw" {
   vpc_id = aws_vpc.network.id
 }
 
-resource "aws_eip" "nat" {}
+resource "aws_eip" "nat" {
+  tags = {
+    Name = "${var.project_name}-nat"
+  }
+}
 
 resource "aws_nat_gateway" "nat" {
   allocation_id = aws_eip.nat.id
